@@ -3,6 +3,13 @@ import { Link } from '../routes';
 
 // TODO: render real network after deployment, not Rinkeby
 const WitnessedByFooter = (props) => {
+
+const DetailPage =()=>{
+
+  const url = `http://201.159.223.92/admin/transaction/${props.address}`;
+  window.open(url, '_blank');
+}
+
   return (
     <div className='Witnessed-By-Footer marco margen'>
       <div className='Witnessed-Box'>
@@ -15,9 +22,9 @@ const WitnessedByFooter = (props) => {
       </div>
       <div className='Witnessed-Box'>
         <div className='Witnessed-Text-2'>This Certificate resides at Ethereum address:</div>
-        <Link route={`http://201.159.223.92/admin/transaction/${props.address}`} >
-          <a className='Witnessed-Text-2'>{ props.address }</a>
-        </Link>
+        
+          <a onClick={DetailPage} className='Witnessed-Text-2'>{ props.address }</a>
+      
       </div>
       <div className='Witnessed-Box'>
         <img className='BlockChain-Logos' src='../static/Ethereum-Icon.png' />
