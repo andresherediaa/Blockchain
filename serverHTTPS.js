@@ -1,14 +1,14 @@
 const express = require('express')
 const next = require('next')
 const cors = require('cors')
-var fs = require("fs");
+var fs =     require("fs");
 var https = require('https');
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dir: ".", dev });
 const routes = require("./routes");
 const handler = routes.getRequestHandler(app);
 
-//aqui se hizo un cmmit pilas
+
 app.prepare().then(() => {
   const server = express();
   server.use(express.json()); //Permite recibir json en el Servidor
