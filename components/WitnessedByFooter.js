@@ -23,7 +23,7 @@ const DetailPage =()=>{
       <div className='Witnessed-Box'>
         <div className='Witnessed-Text-2'>This Certificate resides at Ethereum address:</div>
         
-          <a onClick={DetailPage} className='Witnessed-Text-2'>{ props.address }</a>
+          <a onClick={DetailPage()} className='Witnessed-Text-2'>{ props.address }</a>
       
       </div>
       <div className='Witnessed-Box'>
